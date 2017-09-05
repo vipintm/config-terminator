@@ -78,11 +78,11 @@
       position = 354
       type = HPaned
     [[[terminal3]]]
-      command = ssh -t v_madhavanunni@agvs3.informatik.uni-kl.de ssh -t v_madhavanunni@10.0.1.71 /extra/kernel/rnpc71/scripts/screen-su Code001
+      command = ssh -t v_madhavanunni@agvs3.informatik.uni-kl.de ssh -t v_madhavanunni@10.0.1.71 /extra/kernel/rnpc71/scripts/connect-system-su SecondGen
       order = 0
       parent = child2
       profile = dot11zero
-      title = Code001
+      title = SecondGen
       type = Terminal
     [[[terminal4]]]
       command = ssh -t v_madhavanunni@agvs3.informatik.uni-kl.de ssh -t v_madhavanunni@10.0.1.71 /extra/kernel/rnpc71/scripts/screen-su Code002
@@ -167,11 +167,12 @@
     scrollback_infinite = True
     use_theme_colors = True
   [[dot11zero]]
+    background_darkness = 0.9
     background_image = /home/vipintm/.config/terminator/images/LInux_WLAN_Framework_V_1_0.jpg
     background_type = image
     exit_action = hold
+    foreground_color = "#ffffff"
     scrollback_infinite = True
-    use_theme_colors = True
   [[galileo]]
     background_color = "#300a24"
     background_darkness = 0.94
