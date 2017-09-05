@@ -39,6 +39,32 @@
       parent = child3
       profile = default
       type = Terminal
+  [[InjectTest]]
+    [[[child0]]]
+      order = 0
+      parent = ""
+      position = 0:25
+      size = 1366, 708
+      type = Window
+    [[[child2]]]
+      order = 0
+      parent = child0
+      position = 354
+      type = HPaned
+    [[[terminal3]]]
+      command = ssh -t v_madhavanunni@agvs3.informatik.uni-kl.de ssh -t v_madhavanunni@10.0.1.71 /extra/kernel/rnpc71/scripts/connect-system-su injectTest
+      order = 0
+      parent = child2
+      profile = InjectTest
+      title = injectTest (build env)
+      type = Terminal
+    [[[terminal4]]]
+      command = ssh -t v_madhavanunni@agvs3.informatik.uni-kl.de ssh -t v_madhavanunni@10.0.1.71 su -
+      order = 1
+      parent = child2
+      profile = InjectTest
+      title = Galileo Kernel build (??)
+      type = Terminal
   [[galileo]]
     [[[child0]]]
       order = 0
@@ -76,12 +102,12 @@
     scrollback_infinite = True
     use_theme_colors = True
   [[InjectTest]]
+    background_darkness = 0.9
     background_image = /home/vipintm/.config/terminator/images/wireless-icon.png
     background_type = image
     exit_action = hold
-    scroll_background = False
+    foreground_color = "#ffffff"
     scrollback_infinite = True
-    use_theme_colors = True
   [[KernelBuild]]
     background_image = /home/vipintm/.config/terminator/images/Linux-logo-without-version-number-banner-sized.jpg
     background_type = image
