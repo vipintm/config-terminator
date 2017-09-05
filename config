@@ -150,9 +150,9 @@
     background_image = /extra/Pictures/underground/Wallpapers/hanuman_1.jpg
     background_type = image
     exit_action = hold
+    foreground_color = "#ffffff"
     scroll_background = False
     scrollback_infinite = True
-    use_theme_colors = True
   [[InjectTest]]
     background_darkness = 0.9
     background_image = /home/vipintm/.config/terminator/images/wireless-icon.png
