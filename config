@@ -59,11 +59,37 @@
       title = injectTest (build env)
       type = Terminal
     [[[terminal4]]]
-      command = ssh -t v_madhavanunni@agvs3.informatik.uni-kl.de ssh -t v_madhavanunni@10.0.1.71 su -
+      command = ssh -t v_madhavanunni@agvs3.informatik.uni-kl.de ssh -t v_madhavanunni@10.0.1.71 /extra/kernel/rnpc71/scripts/screen-su Code-injectTest
       order = 1
       parent = child2
       profile = InjectTest
-      title = Galileo Kernel build (??)
+      title = Code-injectTest
+      type = Terminal
+  [[dot11zero]]
+    [[[child0]]]
+      order = 0
+      parent = ""
+      position = 0:25
+      size = 1366, 708
+      type = Window
+    [[[child2]]]
+      order = 0
+      parent = child0
+      position = 354
+      type = HPaned
+    [[[terminal3]]]
+      command = ssh -t v_madhavanunni@agvs3.informatik.uni-kl.de ssh -t v_madhavanunni@10.0.1.71 /extra/kernel/rnpc71/scripts/screen-su Code001
+      order = 0
+      parent = child2
+      profile = dot11zero
+      title = Code001
+      type = Terminal
+    [[[terminal4]]]
+      command = ssh -t v_madhavanunni@agvs3.informatik.uni-kl.de ssh -t v_madhavanunni@10.0.1.71 /extra/kernel/rnpc71/scripts/screen-su Code002
+      order = 1
+      parent = child2
+      profile = dot11zero
+      title = Code002
       type = Terminal
   [[galileo]]
     [[[child0]]]
@@ -90,6 +116,32 @@
       parent = child2
       profile = galileo
       title = TX Galileo 2 (10.0.1.193)
+      type = Terminal
+  [[rnpc71]]
+    [[[child0]]]
+      order = 0
+      parent = ""
+      position = 0:25
+      size = 1366, 708
+      type = Window
+    [[[child2]]]
+      order = 0
+      parent = child0
+      position = 354
+      type = HPaned
+    [[[terminal3]]]
+      command = ssh -t v_madhavanunni@agvs3.informatik.uni-kl.de ssh -t v_madhavanunni@10.0.1.71 /extra/kernel/rnpc71/scripts/screen-su ToSDCard
+      order = 0
+      parent = child2
+      profile = rnpc71
+      title = ToSDCard (copy image)
+      type = Terminal
+    [[[terminal4]]]
+      command = ssh -t v_madhavanunni@agvs3.informatik.uni-kl.de ssh -t v_madhavanunni@10.0.1.71 /extra/kernel/rnpc71/scripts/screen-su rnpc71-base
+      order = 1
+      parent = child2
+      profile = rnpc71
+      title = rnpc71-base
       type = Terminal
 [plugins]
 [profiles]
@@ -129,9 +181,9 @@
     foreground_color = "#ffffff"
     scrollback_infinite = True
   [[rnpc71]]
+    background_darkness = 0.87
     background_image = /home/vipintm/.config/terminator/images/6-512.png
     background_type = image
     exit_action = hold
-    scroll_background = False
+    foreground_color = "#ffffff"
     scrollback_infinite = True
-    use_theme_colors = True
