@@ -1,7 +1,9 @@
 [global_config]
+  broadcast_default = off
   enabled_plugins = InactivityWatch, CustomCommandsMenu, ActivityWatch, TerminalShot, Logger
   sticky = True
   title_hide_sizetext = True
+  window_state = maximise
 [keybindings]
 [layouts]
   [[default]]
@@ -52,14 +54,14 @@
       position = 354
       type = HPaned
     [[[terminal3]]]
-      command = ssh -t v_madhavanunni@agvs3.informatik.uni-kl.de ssh -t v_madhavanunni@10.0.1.71 /extra/kernel/rnpc71/scripts/connect-system-su injectTest
+      command = ssh -t v_madhavanunni@agvs3.informatik.uni-kl.de ssh -t root@10.0.1.71 /extra/kernel/rnpc71/scripts/connect-system injectTest
       order = 0
       parent = child2
       profile = InjectTest
       title = injectTest (build env)
       type = Terminal
     [[[terminal4]]]
-      command = ssh -t v_madhavanunni@agvs3.informatik.uni-kl.de ssh -t v_madhavanunni@10.0.1.71 /extra/kernel/rnpc71/scripts/screen-su Code-injectTest
+      command = ssh -t v_madhavanunni@agvs3.informatik.uni-kl.de ssh -t root@10.0.1.71 /extra/kernel/rnpc71/scripts/screen Code-injectTest
       order = 1
       parent = child2
       profile = InjectTest
@@ -78,14 +80,14 @@
       position = 354
       type = HPaned
     [[[terminal3]]]
-      command = ssh -t v_madhavanunni@agvs3.informatik.uni-kl.de ssh -t v_madhavanunni@10.0.1.71 /extra/kernel/rnpc71/scripts/connect-system-su SecondGen
+      command = ssh -t v_madhavanunni@agvs3.informatik.uni-kl.de ssh -t root@10.0.1.71 /extra/kernel/rnpc71/scripts/connect-system SecondGen
       order = 0
       parent = child2
       profile = dot11zero
       title = SecondGen
       type = Terminal
     [[[terminal4]]]
-      command = ssh -t v_madhavanunni@agvs3.informatik.uni-kl.de ssh -t v_madhavanunni@10.0.1.71 /extra/kernel/rnpc71/scripts/screen-su Code002
+      command = ssh -t v_madhavanunni@agvs3.informatik.uni-kl.de ssh -t root@10.0.1.71 /extra/kernel/rnpc71/scripts/screen Code002
       order = 1
       parent = child2
       profile = dot11zero
@@ -104,14 +106,14 @@
       position = 354
       type = HPaned
     [[[terminal3]]]
-      command = ssh -t v_madhavanunni@agvs3.informatik.uni-kl.de ssh -t v_madhavanunni@10.0.1.71 /extra/kernel/rnpc71/scripts/connect-galileo-su g1
+      command = ssh -t v_madhavanunni@agvs3.informatik.uni-kl.de ssh -t root@10.0.1.71 /extra/kernel/rnpc71/scripts/connect-galileo g1
       order = 0
       parent = child2
       profile = galileo
       title = RX Galileo 1 (10.0.1.192)
       type = Terminal
     [[[terminal4]]]
-      command = ssh -t v_madhavanunni@agvs3.informatik.uni-kl.de ssh -t v_madhavanunni@10.0.1.71 /extra/kernel/rnpc71/scripts/connect-galileo-su g2
+      command = ssh -t v_madhavanunni@agvs3.informatik.uni-kl.de ssh -t root@10.0.1.71 /extra/kernel/rnpc71/scripts/connect-galileo g2
       order = 1
       parent = child2
       profile = galileo
@@ -130,14 +132,14 @@
       position = 354
       type = HPaned
     [[[terminal3]]]
-      command = ssh -t v_madhavanunni@agvs3.informatik.uni-kl.de ssh -t v_madhavanunni@10.0.1.71 /extra/kernel/rnpc71/scripts/screen-su ToSDCard
+      command = ssh -t v_madhavanunni@agvs3.informatik.uni-kl.de ssh -t root@10.0.1.71 /extra/kernel/rnpc71/scripts/screen ToSDCard
       order = 0
       parent = child2
       profile = rnpc71
       title = ToSDCard (copy image)
       type = Terminal
     [[[terminal4]]]
-      command = ssh -t v_madhavanunni@agvs3.informatik.uni-kl.de ssh -t v_madhavanunni@10.0.1.71 /extra/kernel/rnpc71/scripts/screen-su rnpc71-base
+      command = ssh -t v_madhavanunni@agvs3.informatik.uni-kl.de ssh -t root@10.0.1.71 /extra/kernel/rnpc71/scripts/screen rnpc71-base
       order = 1
       parent = child2
       profile = rnpc71
@@ -149,7 +151,7 @@
     background_darkness = 0.9
     background_image = /extra/Pictures/underground/Wallpapers/hanuman_1.jpg
     background_type = image
-    exit_action = hold
+    exit_action = restart
     foreground_color = "#ffffff"
     scroll_background = False
     scrollback_infinite = True
@@ -157,20 +159,20 @@
     background_darkness = 0.9
     background_image = /home/vipintm/.config/terminator/images/wireless-icon.png
     background_type = image
-    exit_action = hold
+    exit_action = restart
     foreground_color = "#ffffff"
     scrollback_infinite = True
   [[KernelBuild]]
     background_image = /home/vipintm/.config/terminator/images/Linux-logo-without-version-number-banner-sized.jpg
     background_type = image
-    exit_action = hold
+    exit_action = restart
     scrollback_infinite = True
     use_theme_colors = True
   [[dot11zero]]
     background_darkness = 0.9
     background_image = /home/vipintm/.config/terminator/images/LInux_WLAN_Framework_V_1_0.jpg
     background_type = image
-    exit_action = hold
+    exit_action = restart
     foreground_color = "#ffffff"
     scrollback_infinite = True
   [[galileo]]
@@ -178,13 +180,13 @@
     background_darkness = 0.94
     background_image = /home/vipintm/.config/terminator/images/intel-galileo-gen2-logo.png
     background_type = image
-    exit_action = hold
+    exit_action = restart
     foreground_color = "#ffffff"
     scrollback_infinite = True
   [[rnpc71]]
     background_darkness = 0.87
     background_image = /home/vipintm/.config/terminator/images/6-512.png
     background_type = image
-    exit_action = hold
+    exit_action = restart
     foreground_color = "#ffffff"
     scrollback_infinite = True
